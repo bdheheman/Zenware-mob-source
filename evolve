@@ -1,28 +1,16 @@
 local PlaceId = game.PlaceId
 local player = game.Players.LocalPlayer
 
--- Set your group ID and required role name
+-- Set your group ID
 local requiredGroupId = 35602864
-local requiredRoleName = "evolve buyers"
 
--- Function to check if the player is in the group and has the required role
-local function hasRequiredRole()
-    local groupInfo = player:GetRoleInGroup(requiredGroupId)
-    return groupInfo == requiredRoleName
-end
-
--- Check if the player meets the group and role conditions
+-- Check if the player is in the required group
 if not player:IsInGroup(requiredGroupId) then
     print("You are not in the required group.")
     return
 end
 
-if not hasRequiredRole() then
-    print("You do not have the required role in the group.")
-    return
-end
-
--- If the player passes the group and role checks, continue with the PlaceId check
+-- If the player is in the group, continue with the PlaceId check
 if PlaceId == 286090429 then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Insertl/QuotasHub/main/BETAv1.3"))()
 elseif PlaceId == 6229116934 then
